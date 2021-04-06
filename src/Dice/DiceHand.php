@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Mos\DiceHand;
+namespace sohe\Dice;
 
 /**
  * Class DiceHand.
@@ -10,12 +10,14 @@ namespace Mos\DiceHand;
 class DiceHand
 {
     private array $dices;
-    private int $sum;
+    private int $amount;
+    public int $sum = 0;
 
-    public function __construct()
+    public function __construct(int $amount = 1)
     {
-        for ($i = 0; $i <= 3; $i++) {
-            $this->$dices[$i] = new Dice();
+        $this->amount = $amount - 1;
+        for ($i = 0; $i <= $this->amount; $i++) {
+            $this->dices[$i] = new Dice();
         }
     }
 
@@ -24,7 +26,7 @@ class DiceHand
         $len = count($this->dices);
 
         $this->sum = 0;
-        for ($i = 0; $i <= 3; $i++) {
+        for ($i = 0; $i <= $this->amount; $i++) {
             $this->sum += $this->dices[$i]->roll();
         }
     }
@@ -32,10 +34,10 @@ class DiceHand
     public function getLastRoll(): string
     {
         $res = "";
-        for ($i = 0; $i <= 3; $i++) {
+        for ($i = 0; $i <= $this->amount; $i++) {
             $res .= $this->dices[$i]->getLastRoll() . ", ";
         }
 
-        return $res . " = " . $this->$sum;
+        return $res . " = " . $this->sum;
     }
 }

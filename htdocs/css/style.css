@@ -1,3 +1,14 @@
+.dice-utf8 .dice-1::after { content: "\2680"; }
+.dice-utf8 .dice-2::after { content: "\2681"; }
+.dice-utf8 .dice-3::after { content: "\2682"; }
+.dice-utf8 .dice-4::after { content: "\2683"; }
+.dice-utf8 .dice-5::after { content: "\2684"; }
+.dice-utf8 .dice-6::after { content: "\2685"; }
+
+.dice-utf8 {
+  font-size: 32px;
+}
+
 body {
     overflow-y: scroll;
     width: 800px;

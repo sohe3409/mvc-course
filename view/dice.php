@@ -6,26 +6,20 @@
 
 declare(strict_types=1);
 
-use Mos\Dice\Dice;
-use Mos\Dice\DiceHand;
-
-$header = $header ?? null;
-$message = $message ?? null;
-
-$die = new Dice();
-$die->roll();
-
-$diceHand = new DiceHand();
-$diceHand->roll();
-
-?><h1><?= $header ?></h1>
-
+?>
+<h1><?= $header ?></h1>
 <p><?= $message ?></p>
-<p>Dice</p>
 
-<p><?= $die->getLastRoll() ?></p>
+<p class="dice-utf8">
+<?php foreach ($class as $value) : ?>
+    <i class="<?= $value ?>"></i>
+<?php endforeach; ?>
+</p>
 
-<p>dicehand</p>
-
-
-<p><?= $diceHand->getLastRoll() ?></p>
+<form action="dice" method="post">
+    <input type="radio" name="dices" value="1" required>
+    <label for="dices">1</label>
+    <input type="radio" name="dices" value="2" required>
+    <label for="dices">2</label>
+    <input type="submit" name="action" value="start">
+</form>

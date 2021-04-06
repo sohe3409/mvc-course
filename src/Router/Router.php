@@ -57,15 +57,37 @@ class Router
             sendResponse($body);
             return;
         } else if ($method === "GET" && $path === "/dice") {
-            $data = [
-                "header" => "Dice",
-                "message" => "Hey, edit this to do it youreself!",
-            ];
-            $body = renderView("layout/dice.php", $data);
+            $callable = new \sohe\Dice\Game();
+            $callable->playGame();
+
+            return;
+        } else if ($method === "POST" && $path === "/dice") {
+            $callable = new \sohe\Dice\Game();
+            $data = $_POST["action"];
+
+            if ($data === "start") {
+                $_SESSION['dices'] = $_POST["dices"];
+                $callable->startGame();
+            } else if ($data === "Roll again") {
+                $callable->startGame();
+            } else if ($data === "New round") {
+                $_SESSION["compScore"] = 0;
+                $_SESSION["score"] = 0;
+                $callable->startGame();
+            } else if ($data === "Stop") {
+                $callable->compare($_POST["score"]);
+            } else if ($data === "Start over") {
+                destroySession();
+                $callable->playGame();
+            }
+
+            return;
+        } else if ($method === "GET" && $path === "/diceGame") {
+            $body = renderView("layout/diceGame.php");
             sendResponse($body);
+
             return;
         }
-
         $data = [
             "header" => "404",
             "message" => "The page you are requesting is not here. You may also checkout the HTTP response code, it should be 404.",
