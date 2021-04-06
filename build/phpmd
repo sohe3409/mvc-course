@@ -1,11 +1,5 @@
-C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Dice\Game.php:89	The method compare uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Dice\Game.php:89	The method compare uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Dice\Game.php:96	The method compare uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Dice\Game.php:96	The method compare uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Router\Router.php:21	The method dispatch() has a Cyclomatic Complexity of 24. The configured cyclomatic complexity threshold is 10.
-C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Router\Router.php:60	Missing class import via use statement (line '60', column '29').
-C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Router\Router.php:65	Missing class import via use statement (line '65', column '29').
+C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Router\Router.php:19	The method dispatch() has a Cyclomatic Complexity of 24. The configured cyclomatic complexity threshold is 10.
+C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Router\Router.php:58	Missing class import via use statement (line '58', column '29').
+C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Router\Router.php:63	Missing class import via use statement (line '63', column '29').
 C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\functions.php:67	Missing class import via use statement (line '67', column '23').
 C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\functions.php:73	Missing class import via use statement (line '73', column '21').
-C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Dice\Dice.php	-	Unexpected token: ?, line: 12, col: 12, file: C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Dice\Dice.php.
-C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Dice\DiceHand.php	-	Unexpected token: array, line: 12, col: 13, file: C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Dice\DiceHand.php.

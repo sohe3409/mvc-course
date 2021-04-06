@@ -1,14 +1,16 @@
 <?php
 
 declare(strict_types=1);
+
 namespace sohe\Dice;
-use function Mos\Functions\{
-    renderView,
-    sendResponse
-};
+
 use sohe\Dice\Dice;
 use sohe\Dice\DiceHand;
 use sohe\Dice\GraphicalDice;
+
+use function Mos\Functions\renderView;
+use function Mos\Functions\sendResponse;
+
 /**
  * Class Game.
  */
@@ -37,7 +39,6 @@ class Game
 
         $body = renderView("layout/dice.php", $data);
         sendResponse($body);
-
     }
 
     public function startGame(): void
@@ -60,7 +61,7 @@ class Game
         $die = new Dice();
         $compScore = 0;
 
-        while($compScore < 21) {
+        while ($compScore < 21) {
             $die->roll();
             $compScore += $die->getLastRoll();
         }
@@ -78,13 +79,13 @@ class Game
 
         $compScore = $this->roll();
         $data['compScore'] = $compScore;
+        $new = 0;
 
         if ($score > 21) {
             $new = $score - 21;
-        } else if ($score < 21) {
+        }
+        if ($score < 21) {
             $new = 21 - $score;
-        } else {
-            $new = 0;
         }
 
         if ($compScore === 21 or ($compScore - 21) < $new) {

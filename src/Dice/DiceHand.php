@@ -9,9 +9,9 @@ namespace sohe\Dice;
  */
 class DiceHand
 {
-    private array $dices;
-    private int $amount;
-    public int $sum = 0;
+    private $dices;
+    private $amount;
+    public $sum = 0;
 
     public function __construct(int $amount = 1)
     {
@@ -23,8 +23,6 @@ class DiceHand
 
     public function roll(): void
     {
-        $len = count($this->dices);
-
         $this->sum = 0;
         for ($i = 0; $i <= $this->amount; $i++) {
             $this->sum += $this->dices[$i]->roll();

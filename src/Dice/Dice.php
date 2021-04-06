@@ -9,8 +9,8 @@ namespace sohe\Dice;
  */
 class Dice
 {
-    public ?int $faces = null;
-    private ?int $roll = null;
+    public $faces;
+    private $roll;
 
     public function __construct(int $faces = 6)
     {
