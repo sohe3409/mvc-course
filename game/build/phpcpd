@@ -1,0 +1,11 @@
+phpcpd 6.0.3 by Sebastian Bergmann.
+
+Found 1 clones with 44 duplicated lines in 2 files:
+
+  - C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Controller\Form.php:3-47 (44 lines)
+    C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Controller\Yatzy.php:3-47
+
+5.85% duplicated lines out of 752 total lines of code.
+Average size of duplication is 44 lines, largest clone has 44 of lines
+
+Time: 00:00.009, Memory: 2.00 MB
