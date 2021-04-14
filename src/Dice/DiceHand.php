@@ -39,16 +39,6 @@ class DiceHand
         return $res . " = " . $this->sum;
     }
 
-    // public function getLastArr(): array
-    // {
-    //     $res = [];
-    //     for ($i = 0; $i <= $this->amount; $i++) {
-    //         array_push($res, $this->dices[$i]->getLastRoll());
-    //     }
-    //
-    //     return $res;
-    // }
-
     public function getLast(array $num = ["one", "two", "three", "four", "five"]): void
     {
         for ($i = 0; $i <= $this->amount; $i++) {
@@ -60,8 +50,9 @@ class DiceHand
     {
         $count = 0;
         foreach ($num as $v) {
-            if ($v === (int)$choice);
-            $count += 1;
+            if ($v === (int)$choice) {
+                $count += 1;
+            };
         }
         $res = (int)$count * (int)$choice;
 
@@ -71,15 +62,13 @@ class DiceHand
         unset($_SESSION["choices"][$choice]);
 
         if (count($_SESSION["choices"]) === 0) {
-            for ($i = 1; $i < 7; $i++) {
-                $_SESSION["score"] += $_SESSION["score" . strval($i)];
-            }
-            if ($_SESSION["score"] > 63) {
+            if ($_SESSION["score"] >= 63) {
                 $_SESSION["bonus"] = 50;
                 $_SESSION["score"] += 50;
             } else {
                 $_SESSION["bonus"] = 0;
             }
+            $_SESSION["status"] = "done";
         }
     }
 }

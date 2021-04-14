@@ -1,0 +1,64 @@
+
+FILE: C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Controller\Yatzy.php
+--------------------------------------------------------------------------------
+FOUND 6 ERRORS AFFECTING 6 LINES
+--------------------------------------------------------------------------------
+   5 | ERROR | [x] Header blocks must be separated by a single blank line
+  26 | ERROR | [x] Line indented incorrectly; expected at least 8 spaces, found
+     |       |     6
+  30 | ERROR | [x] Line indented incorrectly; expected at least 8 spaces, found
+     |       |     6
+  88 | ERROR | [x] Blank line found at end of control structure
+ 123 | ERROR | [x] Each PHP statement must be on a line by itself
+ 132 | ERROR | [x] The closing brace for the class must go on the next line
+     |       |     after the body
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 6 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Dice\HistogramTrait.php
+--------------------------------------------------------------------------------
+FOUND 16 ERRORS AFFECTING 13 LINES
+--------------------------------------------------------------------------------
+ 45 | ERROR | [x] Line indented incorrectly; expected at least 8 spaces, found
+    |       |     6
+ 46 | ERROR | [x] Line indented incorrectly; expected at least 8 spaces, found
+    |       |     6
+ 47 | ERROR | [x] Line indented incorrectly; expected 8 spaces, found 6
+ 48 | ERROR | [x] Line indented incorrectly; expected at least 12 spaces, found
+    |       |     10
+ 49 | ERROR | [x] Line indented incorrectly; expected at least 12 spaces, found
+    |       |     10
+ 49 | ERROR | [x] Inline control structures are not allowed
+ 50 | ERROR | [x] Line indented incorrectly; expected at least 12 spaces, found
+    |       |     10
+ 51 | ERROR | [x] Line indented incorrectly; expected 8 spaces, found 6
+ 52 | ERROR | [x] Line indented incorrectly; expected at least 8 spaces, found
+    |       |     6
+ 52 | ERROR | [x] Expected at least 1 space before "="; 0 found
+ 53 | ERROR | [x] Line indented incorrectly; expected at least 8 spaces, found
+    |       |     6
+ 54 | ERROR | [x] Line indented incorrectly; expected 8 spaces, found 6
+ 55 | ERROR | [x] Line indented incorrectly; expected at least 12 spaces, found
+    |       |     8
+ 55 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 56 | ERROR | [x] Line indented incorrectly; expected 8 spaces, found 6
+ 57 | ERROR | [x] Line indented incorrectly; expected at least 8 spaces, found
+    |       |     6
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 16 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\view\yatzyGame.php
+-------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-------------------------------------------------------------------------
+ 20 | ERROR | [x] Blank line found at start of control structure
+-------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-------------------------------------------------------------------------
+
+Time: 1.64 secs; Memory: 6MB
+

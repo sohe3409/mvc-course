@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace Mos\Controller;
+
 use sohe\Dice\Dice;
 use sohe\Dice\DiceHand;
 use sohe\Dice\GraphicalDice;
@@ -25,11 +26,12 @@ class Yatzy
     {
         $data = [
             "header" => "Yatzy",
-            "message" => "Press submit to send the message to the result page.",
-            "action" => url("/yatzy/play"),
-            "output" => $_SESSION["output"] ?? null,
+            "message" => "Press button to start game!",
+            "action" => url("/yatzy/play")
         ];
+
         $body = renderView("layout/yatzy.php", $data);
+        $_SESSION["status"] = "play";
         $_SESSION["rolls"] = 3;
         $_SESSION["choices"] = [
             "1" => "one", "2" => "two",
@@ -74,11 +76,9 @@ class Yatzy
 
         $data = [
             "header" => "Yatzy",
-            "message" => "blä",
-            "action" => url("/yatzy/play"),
-            "output" => (count($_POST) - 1) ?? null,
+            "message" => "",
+            "action" => url("/yatzy/play")
         ];
-
 
 
         $action = $_POST["action"] ?? null;
@@ -98,9 +98,17 @@ class Yatzy
         } else if ($action === "Continue") {
             $hand = new DiceHand();
             $hand->score($_SESSION["result"], $_POST["choice"]);
-            $_SESSION["rolls"] = 3;
-            $hand->roll();
-            $hand->getLast();
+            if ($_SESSION["status"] === "play") {
+                $_SESSION["rolls"] = 3;
+                $hand->roll();
+                $hand->getLast();
+            }
+        } else if ($action === "Start over") {
+            destroySession();
+
+            return $psr17Factory
+                ->createResponse(301)
+                ->withHeader("Location", url("/yatzy/view"));
         };
 
         $_SESSION["result"] = [
@@ -121,42 +129,5 @@ class Yatzy
               ->withBody($psr17Factory->createStream($body));
     }
 
-    // public function score(): ResponseInterface
-    // {
-    //
-    //     $action = $_POST["action"] ?? null;
-    //     if ($action === "Start!") {
-    //         $hand = new DiceHand();
-    //         $hand->roll();
-    //         $hand->getLast();
-    //
-    //     } else if ($action === "Roll again") {
-    //         $num = [];
-    //         foreach ($_POST as $key => $value) {
-    //             array_push($num, $key);
-    //         }
-    //         $hand = new DiceHand(count($_POST) - 1);
-    //         $hand->roll();
-    //         $hand->getLast($num);
-    //       } else if ($action === "Continue") {
-    //           $hand = new DiceHand();
-    //           $hand->score($_SESSION["result"], [$_POST["choice"]);
-    //           unset($_SESSION["choices"][$_POST["choice"]]);
-    //           $_SESSION["rolls"] = 3;
-    //           $hand->roll();
-    //           $hand->getLast();
-    //         };
-    //
-    //       $_SESSION["result"] = [$_SESSION["one"],
-    //                 $_SESSION["two"],
-    //                 $_SESSION["three"],
-    //                 $_SESSION["four"],
-    //                 $_SESSION["five"]];
-    //
-    //       $histo = new DiceHistogram();
-    //       $histo->setHistogramSerie($_SESSION["result"]);
-    //
-    //       $data["message"] = $histo->printHistogram();;
-    //
-    // }
+
 }

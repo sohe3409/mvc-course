@@ -42,6 +42,6 @@ $router->addGroup("/dice", function (RouteCollector $router) {
 });
 
 $router->addGroup("/yatzy", function (RouteCollector $router) {
-    $router->addRoute("GET", "", ["\Mos\Controller\Yatzy", "view"]);
+    $router->addRoute("GET", "/view", ["\Mos\Controller\Yatzy", "view"]);
     $router->addRoute("POST", "/play", ["\Mos\Controller\Yatzy", "process"]);
 });

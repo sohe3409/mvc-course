@@ -42,18 +42,18 @@ trait HistogramTrait
      */
     public function printHistogram()
     {
-      $step_size = 1;
-      $histogramArray = array();
-      foreach ($this->serie as $v) {
-          $k = (int)ceil($v / $step_size) * $step_size;
-          if (!array_key_exists($k, $histogramArray)) $histogramArray[$k] = 0;
-          $histogramArray[$k]++;
-      }
-      $res= "";
-      ksort($histogramArray);
-      foreach ($histogramArray as $key => $value) {
-        $res .= $key. ": " . str_repeat("*", $value) . "<br>";
-      }
-      return $res;
+        $step_size = 1;
+        $histogramArray = array();
+        foreach ($this->serie as $v) {
+            $k = (int)ceil($v / $step_size) * $step_size;
+            if (!array_key_exists($k, $histogramArray)) $histogramArray[$k] = 0;
+            $histogramArray[$k]++;
+        }
+        $res = "";
+        ksort($histogramArray);
+        foreach ($histogramArray as $key => $value) {
+          $res .= $key . ": " . str_repeat("*", $value) . "<br>";
+        }
+        return $res;
     }
 }
