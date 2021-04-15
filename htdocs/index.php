@@ -37,7 +37,7 @@ $path   = getRoutePath();
 
 // Load the routes from the configuration file
 $router = null;
-$dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $router) {
+$dispatcher = FastRoute\simpleDispatcher(function (FastRoute\RouteCollector $router) {
     require INSTALL_PATH . "/config/router.php";
 });
 

@@ -8,11 +8,9 @@ use Nyholm\Psr7\Factory\Psr17Factory;
 use Nyholm\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
 
-use function Mos\Functions\{
-    destroySession,
-    renderView,
-    url
-};
+use function Mos\Functions\destroySession;
+use function Mos\Functions\renderView;
+use function Mos\Functions\url;
 
 /**
  * Controller for the session routes.

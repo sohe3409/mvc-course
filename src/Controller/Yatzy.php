@@ -11,11 +11,9 @@ use sohe\Dice\DiceHistogram;
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\ResponseInterface;
 
-use function Mos\Functions\{
-    destroySession,
-    renderView,
-    url
-};
+use function Mos\Functions\destroySession;
+use function Mos\Functions\renderView;
+use function Mos\Functions\url;
 
 /**
  * Controller showing how to work with forms.
@@ -88,7 +86,7 @@ class Yatzy
             $hand->getLast();
         } else if ($action === "Roll again") {
             $num = [];
-            foreach ($_POST as $key => $value) {
+            foreach (array_keys($_POST) as $key) {
                 array_push($num, $key);
             }
             $hand = new DiceHand(count($_POST) - 1);
