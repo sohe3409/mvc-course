@@ -10,7 +10,6 @@ $header = $header ?? null;
 $message = $message ?? null;
 $action = $action ?? null;
 $output = $output ?? null;
-$status = "Roll again";
 
 $_SESSION["rolls"] -= 1;
 $count = $_SESSION["rolls"];
@@ -18,7 +17,6 @@ $count = $_SESSION["rolls"];
 ?><h1><?= $header ?></h1>
 
 <?php if ($_SESSION["status"] === "play") { ?>
-
 <p>Rolls left: <?= $count ?></p>
 
     <?php if ($count === 0) { ?>
@@ -45,8 +43,14 @@ $count = $_SESSION["rolls"];
             <input type="radio" name="five" value="<?= $_SESSION["five"] ?>">
             <label for="dices"><?= $_SESSION["five"] ?></label><br><br>
 
-            <input type="submit" name="action" value="<?= $status ?>">
+            <input type="submit" name="action" value="Roll again">
         </form>
+        <form action="<?= $action ?>" method="post">
+            <p>
+                <input type="submit" name="action" value="Stop">
+            </p>
+        </form>
+
     <?php } ?>
     <p><?= $message ?></p>
 <?php } else { ?>

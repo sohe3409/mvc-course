@@ -86,7 +86,6 @@ class Yatzy
             $hand = new DiceHand();
             $hand->roll();
             $hand->getLast();
-
         } else if ($action === "Roll again") {
             $num = [];
             foreach ($_POST as $key => $value) {
@@ -103,13 +102,15 @@ class Yatzy
                 $hand->roll();
                 $hand->getLast();
             }
+        } else if ($action === "Stop") {
+            $_SESSION["rolls"] = 1;
         } else if ($action === "Start over") {
             destroySession();
-
             return $psr17Factory
                 ->createResponse(301)
                 ->withHeader("Location", url("/yatzy/view"));
         };
+
 
         $_SESSION["result"] = [
                   $_SESSION["one"],
@@ -121,13 +122,11 @@ class Yatzy
           $histo = new DiceHistogram();
           $histo->setHistogramSerie($_SESSION["result"]);
 
-          $data["message"] = $histo->printHistogram();;
+          $data["message"] = $histo->printHistogram();
 
           $body = renderView("layout/yatzyGame.php", $data);
           return $psr17Factory
               ->createResponse(200)
               ->withBody($psr17Factory->createStream($body));
     }
-
-
 }
