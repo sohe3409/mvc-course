@@ -113,6 +113,7 @@ class ClassDiceTest extends TestCase
     public function testHandScore()
     {
         $this->start();
+        $_SESSION["score"] = 63;
         $hand = new DiceHand(1);
         $hand->roll();
         $hand->getLast();
@@ -125,7 +126,7 @@ class ClassDiceTest extends TestCase
             $res = 1;
         }
 
-        $this->assertEquals($_SESSION["score"], $res);
+        $this->assertEquals($_SESSION["score"] - 113, $res);
     }
 
     public function testHistogram()

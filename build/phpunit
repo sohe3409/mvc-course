@@ -1,21 +1,11 @@
 PHPUnit 9.5.4 by Sebastian Bergmann and contributors.
 
-.................................E........                        42 / 42 (100%)
+..........................................                        42 / 42 (100%)
 
-Time: 00:05.768, Memory: 24.00 MB
+Time: 00:07.988, Memory: 24.00 MB
 
-There was 1 error:
+OK (42 tests, 55 assertions)
 
-1) Mos\Controller\ControllerYatzyTest::testControllerProcess
-Cannot modify header information - headers already sent by (output started at C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\vendor\phpunit\phpunit\src\Util\Printer.php:104)
+Generating code coverage report in Clover XML format ... done [00:00.058]
 
-C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\functions.php:208
-C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Controller\Yatzy.php:106
-C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\test\Controller\ControllerYatzyTest.php:89
-
-ERRORS!
-Tests: 42, Assertions: 53, Errors: 1.
-
-Generating code coverage report in Clover XML format ... done [00:00.116]
-
-Generating code coverage report in HTML format ... done [00:00.791]
+Generating code coverage report in HTML format ... done [00:00.740]

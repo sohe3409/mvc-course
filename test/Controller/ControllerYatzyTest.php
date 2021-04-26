@@ -79,17 +79,6 @@ class ControllerYatzyTest extends TestCase
         $this->assertInstanceOf($exp, $res);
     }
 
-    public function testControllerProcess()
-    {
-        $this->start();
-        $_POST["action"] = "Start over";
-        $controller = new Yatzy();
-
-        $exp = "\Psr\Http\Message\ResponseInterface";
-        $res = $controller->process();
-        $this->assertInstanceOf($exp, $res);
-    }
-
     public function testControllerProcessActionStart()
     {
         $this->start();

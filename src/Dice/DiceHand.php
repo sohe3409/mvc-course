@@ -65,8 +65,6 @@ class DiceHand
             if ($_SESSION["score"] >= 63) {
                 $_SESSION["bonus"] = 50;
                 $_SESSION["score"] += 50;
-            } else {
-                $_SESSION["bonus"] = 0;
             }
             $_SESSION["status"] = "done";
         }
