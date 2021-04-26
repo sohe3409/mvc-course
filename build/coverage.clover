@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1619440230">
-  <project timestamp="1619440230">
+<coverage generated="1619455998">
+  <project timestamp="1619455998">
     <file name="C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\config\bootstrap.php">
       <line num="10" type="stmt" count="1"/>
       <line num="11" type="stmt" count="1"/>
@@ -92,7 +92,7 @@
     </file>
     <file name="C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Controller\Game.php">
       <class name="Mos\Controller\Game" namespace="global">
-        <metrics complexity="14" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="55" coveredstatements="51" elements="58" coveredelements="53"/>
+        <metrics complexity="15" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="55" coveredstatements="51" elements="58" coveredelements="53"/>
       </class>
       <line num="21" type="method" name="playGame" visibility="public" complexity="2" crap="2" count="1"/>
       <line num="23" type="stmt" count="1"/>
@@ -103,7 +103,7 @@
       <line num="35" type="stmt" count="1"/>
       <line num="38" type="stmt" count="1"/>
       <line num="39" type="stmt" count="1"/>
-      <line num="42" type="method" name="startGame" visibility="public" complexity="10" crap="10.09" count="2"/>
+      <line num="42" type="method" name="startGame" visibility="public" complexity="11" crap="11.11" count="2"/>
       <line num="44" type="stmt" count="2"/>
       <line num="47" type="stmt" count="2"/>
       <line num="52" type="stmt" count="2"/>

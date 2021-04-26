@@ -79,7 +79,7 @@ class Game
                 $new = 21 - $score;
             }
 
-            if ($compScore === 21 or ($compScore - 21) < $new) {
+            if (($score != 21 and $compScore == 21) or (($compScore - 21) < $new)) {
                 $data['message'] = "The Computer won!";
                 $_SESSION["computer"] += 1;
             } else {

@@ -13,7 +13,7 @@ use Psr\Http\Message\ResponseInterface;
 class ControllerGameTest extends TestCase
 {
     public function start()
-    {
+    { 
         $_SESSION = array('key' => 'value');
         $_POST = array('key' => 'value');
         $_SESSION["dices"] = 0;
@@ -30,7 +30,7 @@ class ControllerGameTest extends TestCase
         $this->assertInstanceOf("\Mos\Controller\Game", $controller);
     }
 
-    public function testControllerViewAction()
+    public function testControllerView()
     {
         $controller = new Game();
 
@@ -39,7 +39,7 @@ class ControllerGameTest extends TestCase
         $this->assertInstanceOf($exp, $res);
     }
 
-    public function testControllerProcessAction()
+    public function testControllerProcess()
     {
         $this->start();
         $controller = new Game();
@@ -49,7 +49,7 @@ class ControllerGameTest extends TestCase
         $this->assertInstanceOf($exp, $res);
     }
 
-    public function testControllerProcessActionStart()
+    public function testControllerProcessAction()
     {
         $this->start();
         $action = ["start", "Roll again", "Stop", "New round", "Start over"];
@@ -76,7 +76,7 @@ class ControllerGameTest extends TestCase
         $_POST["action"] = $action[2];
         $_POST["score"] = 21;
         $game->startGame();
-        $this->assertEquals($_SESSION["user"], 1 || 0);
+        $this->assertEquals($_SESSION["user"], 1);
 
         $_POST["action"] = $action[3];
         $game->startGame();
