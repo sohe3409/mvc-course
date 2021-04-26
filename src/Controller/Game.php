@@ -46,6 +46,7 @@ class Game
         $data = [
           "header" => "Game 21",
           "message" => "Roll your dices and score as close to 21 as possible.",
+          "sum" => ""
         ];
 
         $action = $_POST["action"];
