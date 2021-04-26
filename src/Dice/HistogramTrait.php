@@ -43,12 +43,12 @@ trait HistogramTrait
     public function printHistogram()
     {
         $histogramArray = array();
-        foreach ($this->serie as $v) {
-            $k = (int)$v;
-            if (!array_key_exists($k, $histogramArray)) {
-                $histogramArray[$k] = 0;
+        foreach ($this->serie as $val) {
+            $key = (int)$val;
+            if (!array_key_exists($key, $histogramArray)) {
+                $histogramArray[$key] = 0;
             }
-            $histogramArray[$k]++;
+            $histogramArray[$key]++;
         }
         $res = "";
         ksort($histogramArray);

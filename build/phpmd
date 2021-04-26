@@ -1,0 +1,2 @@
+C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Controller\Game.php:42	The method startGame() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.
+C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\src\Controller\Game.php:85	The method startGame uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.

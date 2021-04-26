@@ -13,7 +13,7 @@ use Psr\Http\Message\ResponseInterface;
 class ControllerGameTest extends TestCase
 {
     public function start()
-    { 
+    {
         $_SESSION = array('key' => 'value');
         $_POST = array('key' => 'value');
         $_SESSION["dices"] = 0;
