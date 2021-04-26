@@ -13,16 +13,16 @@ use Psr\Http\Message\ResponseInterface;
 class ControllerGameTest extends TestCase
 {
     public function start()
-      {
-          $_SESSION = array('key' => 'value');
-          $_POST = array('key' => 'value');
-          $_SESSION["dices"] = 0;
-          $_SESSION["computer"] = 0;
-          $_SESSION["user"] = 0;
-          $_SESSION["compScore"] = 0;
-          $_SESSION["score"] = 0;
-          $_POST["action"] = "";
-      }
+    {
+        $_SESSION = array('key' => 'value');
+        $_POST = array('key' => 'value');
+        $_SESSION["dices"] = 0;
+        $_SESSION["computer"] = 0;
+        $_SESSION["user"] = 0;
+        $_SESSION["compScore"] = 0;
+        $_SESSION["score"] = 0;
+        $_POST["action"] = "";
+    }
 
     public function testCreateTheControllerClass()
     {
@@ -64,7 +64,7 @@ class ControllerGameTest extends TestCase
         $game->startGame();
 
         $_POST["action"] = $action[2];
-        $_POST["score"] = 2;
+        $_POST["score"] = 0;
         $game->startGame();
         $this->assertEquals($_SESSION["computer"], 1);
 
@@ -76,6 +76,4 @@ class ControllerGameTest extends TestCase
         $_POST["action"] = $action[3];
         $game->startGame();
     }
-
-
 }

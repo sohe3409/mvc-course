@@ -14,43 +14,43 @@ class ClassDiceTest extends TestCase
 {
     public function start()
     {
-      $_SESSION = array('key' => 'value');
-      $_SESSION["status"] = "play";
-      $_SESSION["rolls"] = 3;
-      $_SESSION["choices"] = [
-          "1" => "one", "2" => "two",
-          "3" => "three", "4" => "four",
-          "5" => "five", "6" => "six"];
+        $_SESSION = array('key' => 'value');
+        $_SESSION["status"] = "play";
+        $_SESSION["rolls"] = 3;
+        $_SESSION["choices"] = [
+            "1" => "one", "2" => "two",
+            "3" => "three", "4" => "four",
+            "5" => "five", "6" => "six"];
 
-      $_SESSION["score1"] = 0;
-      $_SESSION["score2"] = 0;
-      $_SESSION["score3"] = 0;
-      $_SESSION["score4"] = 0;
-      $_SESSION["score5"] = 0;
-      $_SESSION["score6"] = 0;
-      $_SESSION["score"] = 0;
-      $_SESSION["bonus"] = 0;
-      if (!isset($_SESSION["one"])) {
-            $_SESSION["one"] = 0;
-      }
-      if (!isset($_SESSION["two"])) {
-            $_SESSION["two"] = 0;
-      }
-      if (!isset($_SESSION["three"])) {
-            $_SESSION["three"] = 0;
-      }
-      if (!isset($_SESSION["four"])) {
-            $_SESSION["four"] = 0;
-      }
-      if (!isset($_SESSION["five"])) {
-            $_SESSION["five"] = 0;
-      }
-      $_SESSION["result"] = [
-          $_SESSION["one"],
-          $_SESSION["two"],
-          $_SESSION["three"],
-          $_SESSION["four"],
-          $_SESSION["five"]];
+        $_SESSION["score1"] = 0;
+        $_SESSION["score2"] = 0;
+        $_SESSION["score3"] = 0;
+        $_SESSION["score4"] = 0;
+        $_SESSION["score5"] = 0;
+        $_SESSION["score6"] = 0;
+        $_SESSION["score"] = 0;
+        $_SESSION["bonus"] = 0;
+        if (!isset($_SESSION["one"])) {
+              $_SESSION["one"] = 0;
+        }
+        if (!isset($_SESSION["two"])) {
+              $_SESSION["two"] = 0;
+        }
+        if (!isset($_SESSION["three"])) {
+              $_SESSION["three"] = 0;
+        }
+        if (!isset($_SESSION["four"])) {
+              $_SESSION["four"] = 0;
+        }
+        if (!isset($_SESSION["five"])) {
+              $_SESSION["five"] = 0;
+        }
+        $_SESSION["result"] = [
+            $_SESSION["one"],
+            $_SESSION["two"],
+            $_SESSION["three"],
+            $_SESSION["four"],
+            $_SESSION["five"]];
     }
 
     public function testDiceRoll()

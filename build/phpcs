@@ -1,0 +1,13 @@
+
+FILE: C:\cygwin64\home\Sofia\dbwebb-kurser\mvc\me\game\test\Controller\ControllerYatzyTest.php
+----------------------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------------------------------
+ 5 | ERROR | [x] Header blocks must be separated by a single blank line
+ 9 | ERROR | [x] Header blocks must be separated by a single blank line
+----------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------------------------------
+
+Time: 2.11 secs; Memory: 8MB
+
